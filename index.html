@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Forno D'Oro Pizzaria Premium — As melhores pizzas artesanais com ingredientes selecionados. Peça agora e receba em casa!">
+    <meta name="keywords" content="pizzaria, pizza delivery, pizza artesanal, pizza premium, pedir pizza">
+    <meta name="author" content="Forno D'Oro">
+    <title>Forno D'Oro | Pizzaria Premium — Delivery</title>
+
+    <!-- Google Fonts: Playfair Display (premium headlines) + Inter (modern body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons (lightweight, modern icon set) -->
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===================================================================
+         NAVIGATION — Sticky header com logo e atalhos
+    ==================================================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#" class="navbar__logo">
+                <span class="logo-icon">🔥</span>
+                <span class="logo-text">Forno <em>D'Oro</em></span>
+            </a>
+            <ul class="navbar__links">
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+                <li><a href="#oferta">Ofertas</a></li>
+            </ul>
+            <!-- Cart toggle button on navbar -->
+            <button class="navbar__cart-btn" id="cart-toggle-nav" aria-label="Abrir carrinho">
+                <i class="ph ph-shopping-cart"></i>
+                <span class="cart-count" id="cart-count-nav">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================================================================
+         HERO SECTION — Impacto visual + CTA principal
+         Overlay escuro + headline persuasiva + botão de ação forte
+    ==================================================================== -->
+    <header class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content container">
+            <span class="hero__badge animate-fade-up">🏆 Eleita a Melhor Pizza da Cidade</span>
+            <h1 class="hero__title animate-fade-up delay-1">
+                A Pizza que Você <br><span class="highlight">Merece</span> Está Aqui
+            </h1>
+            <p class="hero__subtitle animate-fade-up delay-2">
+                Massa artesanal, ingredientes premium e entrega em até 40 minutos.
+                Cada fatia é uma experiência.
+            </p>
+            <a href="#cardapio" class="btn btn--primary btn--lg hero__cta animate-fade-up delay-3">
+                Quero minha pizza agora 🍕
+            </a>
+            <div class="hero__stats animate-fade-up delay-4">
+                <div class="stat">
+                    <span class="stat__number">4.9</span>
+                    <span class="stat__label">★ Avaliação</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">12k+</span>
+                    <span class="stat__label">Pedidos/mês</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">40min</span>
+                    <span class="stat__label">Entrega média</span>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative curved bottom -->
+        <div class="hero__curve">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,80 C360,150 1080,0 1440,80 L1440,120 L0,120 Z" fill="var(--bg-primary)" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- ===================================================================
+         DIFERENCIAIS DA MARCA — Ícones + copy impactante
+    ==================================================================== -->
+    <section class="features" id="diferenciais">
+        <div class="container">
+            <div class="features__grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                        <i class="ph ph-fire"></i>
+                    </div>
+                    <h3 class="feature-card__title">Forno a Lenha</h3>
+                    <p class="feature-card__text">Massa assada no forno a lenha a 450°C — crocante por fora, macia por
+                        dentro.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                        <i class="ph ph-leaf"></i>
+                    </div>
+                    <h3 class="feature-card__title">Ingredientes Frescos</h3>
+                    <p class="feature-card__text">Selecionados diariamente. Sem conservantes, sem compromisso com a
+                        qualidade.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                        <i class="ph ph-clock"></i>
+                    </div>
+                    <h3 class="feature-card__title">Entrega Rápida</h3>
+                    <p class="feature-card__text">Média de 40 minutos. Porque pizza boa é pizza quente na sua mesa.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-card__icon">
+                        <i class="ph ph-medal"></i>
+                    </div>
+                    <h3 class="feature-card__title">Receitas Premiadas</h3>
+                    <p class="feature-card__text">Criações de um pizzaiolo com 15 anos de experiência na Itália.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================
+         CARDÁPIO INTERATIVO — Cards com imagem, descrição, preço e CTA
+    ==================================================================== -->
+    <section class="menu" id="cardapio">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Nosso Cardápio</span>
+                <h2 class="section-title">Escolha Sua <span class="highlight">Favorita</span></h2>
+                <p class="section-subtitle">Cada pizza é uma obra-prima artesanal. Qual será a sua hoje?</p>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="menu__filters animate-on-scroll">
+                <button class="menu__filter active" data-filter="todas">Todas</button>
+                <button class="menu__filter" data-filter="tradicionais">Tradicionais</button>
+                <button class="menu__filter" data-filter="especiais">Especiais</button>
+                <button class="menu__filter" data-filter="premium">Premium</button>
+            </div>
+
+            <div class="menu__grid" id="menu-grid">
+                <!-- Cards are populated dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================
+         OFERTA COM ESCASSEZ — Timer + urgência + CTA
+    ==================================================================== -->
+    <section class="offer" id="oferta">
+        <div class="container">
+            <div class="offer__card animate-on-scroll">
+                <div class="offer__badge">🔥 OFERTA ESPECIAL</div>
+                <h2 class="offer__title">2 Pizzas Grandes + Refrigerante 2L</h2>
+                <div class="offer__prices">
+                    <span class="offer__old-price">R$ 139,90</span>
+                    <span class="offer__new-price">R$ 89,90</span>
+                </div>
+                <p class="offer__savings">Você economiza R$ 50,00! 💰</p>
+                <div class="offer__timer" id="offer-timer">
+                    <div class="timer-block">
+                        <span class="timer-value" id="timer-hours">00</span>
+                        <span class="timer-label">Horas</span>
+                    </div>
+                    <span class="timer-separator">:</span>
+                    <div class="timer-block">
+                        <span class="timer-value" id="timer-minutes">00</span>
+                        <span class="timer-label">Min</span>
+                    </div>
+                    <span class="timer-separator">:</span>
+                    <div class="timer-block">
+                        <span class="timer-value" id="timer-seconds">00</span>
+                        <span class="timer-label">Seg</span>
+                    </div>
+                </div>
+                <p class="offer__urgency">⚡ Restam apenas <strong id="offer-remaining">23</strong> combos neste preço!
+                </p>
+                <button class="btn btn--primary btn--lg offer__cta" id="offer-cta" data-name="Combo 2 Pizzas + Refri"
+                    data-price="89.90">
+                    Garantir meu combo agora 🍕
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================
+         PROVA SOCIAL — Avaliações + depoimentos reais
+    ==================================================================== -->
+    <section class="reviews" id="avaliacoes">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Prova Social</span>
+                <h2 class="section-title">O Que Nossos Clientes <span class="highlight">Dizem</span></h2>
+                <p class="section-subtitle">+2.400 avaliações 5 estrelas. Não somos nós que dizemos, são eles.</p>
+            </div>
+
+            <div class="reviews__grid">
+                <div class="review-card animate-on-scroll">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Melhor pizza que já comi na vida! A massa é simplesmente perfeita,
+                        crocante por fora e macia por dentro. E chega super rápido!"</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">MC</div>
+                        <div>
+                            <strong>Maria Clara</strong>
+                            <span>Cliente há 2 anos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate-on-scroll">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"A Quattro Formaggi é absurda! Nunca mais pedi pizza em outro lugar. O
+                        atendimento também é nota 10, sempre muito atenciosos."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">RS</div>
+                        <div>
+                            <strong>Rafael Santos</strong>
+                            <span>Cliente há 1 ano</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate-on-scroll">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Peço toda sexta-feira para a família. A Pepperoni Suprema é viciante!
+                        E o preço é super justo pela qualidade que entregam."</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">AL</div>
+                        <div>
+                            <strong>Ana Luiza</strong>
+                            <span>Cliente há 3 anos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="trust-badges animate-on-scroll">
+                <div class="trust-badge">
+                    <i class="ph ph-shield-check"></i>
+                    <span>Pagamento Seguro</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="ph ph-seal-check"></i>
+                    <span>Satisfação Garantida</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="ph ph-star"></i>
+                    <span>4.9 no Google</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="ph ph-thumbs-up"></i>
+                    <span>98% Aprovação</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================
+         CTA FINAL — Último empurrão para conversão
+    ==================================================================== -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta__content animate-on-scroll">
+                <h2 class="final-cta__title">Sua Pizza Perfeita Está a Um Clique</h2>
+                <p class="final-cta__text">Não deixe para depois. A fome não espera e a nossa pizza também não.</p>
+                <a href="#cardapio" class="btn btn--primary btn--lg">Fazer meu pedido agora 🍕</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================
+         FOOTER
+    ==================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <span class="logo-icon">🔥</span>
+                    <span class="logo-text">Forno <em>D'Oro</em></span>
+                    <p>Pizzas artesanais premium com ingredientes selecionados, assadas no forno a lenha.</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Navegação</h4>
+                    <a href="#cardapio">Cardápio</a>
+                    <a href="#avaliacoes">Avaliações</a>
+                    <a href="#oferta">Ofertas</a>
+                </div>
+                <div class="footer__contact">
+                    <h4>Contato</h4>
+                    <p><i class="ph ph-phone"></i> (11) 98765-4321</p>
+                    <p><i class="ph ph-map-pin"></i> Rua das Oliveiras, 421</p>
+                    <p><i class="ph ph-clock"></i> Ter–Dom, 18h–00h</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Forno D'Oro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================================================
+         CARRINHO (Sidebar / Drawer)
+    ==================================================================== -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart" id="cart">
+        <div class="cart__header">
+            <h3><i class="ph ph-shopping-cart"></i> Meu Pedido</h3>
+            <button class="cart__close" id="cart-close" aria-label="Fechar carrinho">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <div class="cart__items" id="cart-items">
+            <!-- Items renderizados via JS -->
+            <div class="cart__empty" id="cart-empty">
+                <i class="ph ph-pizza"></i>
+                <p>Seu carrinho está vazio</p>
+                <span>Adicione pizzas deliciosas!</span>
+            </div>
+        </div>
+        <div class="cart__footer" id="cart-footer">
+            <div class="cart__total">
+                <span>Total:</span>
+                <strong id="cart-total">R$ 0,00</strong>
+            </div>
+            <button class="btn btn--primary btn--lg cart__checkout" id="cart-checkout">
+                Finalizar Pedido ✅
+            </button>
+        </div>
+    </aside>
+
+    <!-- ===================================================================
+         STICKY MOBILE CTA — Botão fixo no mobile
+    ==================================================================== -->
+    <div class="sticky-cta" id="sticky-cta">
+        <button class="btn btn--primary sticky-cta__btn" id="sticky-cart-btn">
+            <i class="ph ph-shopping-cart"></i>
+            Ver Pedido
+            <span class="sticky-cta__count" id="cart-count-sticky">0</span>
+            <span class="sticky-cta__total" id="cart-total-sticky">R$ 0,00</span>
+        </button>
+    </div>
+
+    <!-- ===================================================================
+         MODAL DE CONFIRMAÇÃO DE PEDIDO
+    ==================================================================== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="order-modal">
+            <div class="modal__icon">✅</div>
+            <h3 class="modal__title">Pedido Enviado com Sucesso!</h3>
+            <p class="modal__text">Seu pedido foi recebido e está sendo preparado com carinho. Tempo estimado de
+                entrega: <strong>35-45 minutos</strong>.</p>
+            <div class="modal__order-number">
+                Pedido #<span id="order-number">0000</span>
+            </div>
+            <button class="btn btn--primary modal__btn" id="modal-close">Entendido 👍</button>
+        </div>
+    </div>
+
+    <!-- Notification toast -->
+    <div class="toast" id="toast">
+        <i class="ph ph-check-circle"></i>
+        <span id="toast-message">Item adicionado ao carrinho!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
